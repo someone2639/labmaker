@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDq3Qd_j78ve_Oy23vAVQ7bpTryKR03SM0",
+            authDomain: "mist-d7448.firebaseapp.com",
+            databaseURL: "https://mist-d7448.firebaseio.com",
+            projectId: "mist-d7448",
+            storageBucket: "mist-d7448.appspot.com",
+            messagingSenderId: "484439391120"
+        };
+        firebase.initializeApp(config);
+    </script>
+        <script type="text/javascript" src="funcs.js"></script>
+        <link rel="stylesheet" href="sty.css" type="text/css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    </head>
+    <body onclick="clik(event)" style="width:100%;">
+        <div id="bod" style="margin-bottom:50px;">
+            <div class="loader">
+                <img src=""/>
+            </div>
+            <div id="bodyElement" class="marginn" style="opacity:0; z-index=-9999;position:absolute;left:-1000px;">
+                <div class="mdl-card mdl-shadow--2dp mdl-base" width=100% style="padding:20px;">
+                    <span>Idea 1</span>
+                    <div style="display:inline-block;">
+                        <img draggable=false style="max-width:100px;" height=100 src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png">
+                        <div id="description">This is a description</div>
+                    </div>
+                    <div class="horiz-layout">
+                        <button class="mdl-button mdl-js-button mdl-button--colored">
+                              Download
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--colored">
+                              Improve
+                        </button>
+                    </div>
+                    </div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card mdl-shadow--2dp mdl-base" style="max-height="70px;>
+                            <img width="50px" src="http://searchengineland.com/figz/wp-content/seloads/2013/09/Screen-Shot-2013-09-17-at-1.33.42-AM.png"/>
+                            <span>Improvement 1</span>
+                        </div>
+                    </div>
+                </div>
+                
+            <div>
+        </div>
+        <div class="mdl-mega-footer" style="width:100%;background-color:white;position:fixed;bottom:0; align-items:center; z-index:9999; opacity:1;">
+            <button style:"width:50%;margin:auto;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclock="goToUpload()">
+                  New
+            </button>
+        </div>
+    </body>
+</html>

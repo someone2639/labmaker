@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script src="https://mist-notme97.c9users.io/pixi.js" type="text/javascript"></script>
+        <script src="https://mist-notme97.c9users.io/pixiFill.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <div></div>
+    </body>
+    <script type="text/javascript">
+        var app = new PIXI.Application(800, 600, {
+            backgroundColor: 0xffffff
+        });
+        document.body.appendChild(app.view);
+        var lab = new PIXI.Container();
+        app.stage.addChild(lab)
+        var test_tube = createDraggable("test.png", middlex(), middley(), lab);
+        var beaker = createStatic("/beaker/beaker.png?num=0", widthPercent(70), middley(), lab)
+        app.ticker.add(function(delta) {
+            contain(test_tube, lab);
+            var value = 0;
+            beaker.texture = PIXI.Texture.fromImage("/beaker/beaker.png?num=" + value)
+            if (test_tube.x > widthPercent(70)) {
+                test_tube.rotation = 0.5;
+                test_tube.x = widthPercent(45)
+                window.prompt("Enter value to fill (mL, 0-100)", value);
+                value = Math.round(value / 10) * 10;
+            }
+        })
+        console.log(exportData());
+    </script>
+
+</html>
